@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>侧边滑出菜单栏</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body class="">
+    <nav class="siderMenu">
+        <h1>SiderMenu</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Help center</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="siderTarget"><span></span></div>
+        <h2>SiderMenu</h2>
+    </div>
+    <script type="text/javascript">
+    (function() {
+        var $body = document.body,
+            $target = $body.getElementsByClassName('siderTarget')[0];
+        $target.addEventListener('click', function() {
+            // $body.className=( $body.className == 'menu-active' )? '' : 'menu-active';
+            if ($body.className.length == 0) {
+                $body.className = 'menu-active';
+            } else {
+                $body.className = '';
+            }
+        })
+    })();
+    </script>
+</body>
+
+</html>
